@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,300;0,9..40,600;0,9..40,800;1,9..40,400&family=Hind+Siliguri:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="" title="Xone" class="logo">XoneHD</a>
+
+            <ul>
+                <li><a class="active_link" href="index.html">Home</a></li>
+                <li><a href="">Articles</a></li>
+                <li><a href="">Videos</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+            <a href="" title="Login" class="login">Login</a>
+
+            <div title="Toggle" class="bars">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown_menu">
+            <li><a class="active_link" href="">Home</a></li>
+            <li><a href="">Articles</a></li>
+            <li><a href="">Videos</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="" title="Login" class="login">Login</a></li>
+        </div>
+    </header>
+
+    <div class="drop1">
+        <div class="heading1">
+            <h1 class="tag1">10000+ ARTICLES</h1>
+            <p id="Wquote" title="Wrong Quote" class="text1">SKY IS THE LIMIT!</p>
+            <p id="Rquote" title="Right Quote" class="text2">SKY HAS NO LIMIT!</p>
+        </div>
+    </div>
+
+    <style>
+        body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: black;
+    box-shadow: inset 0 0 100px rgb(0, 0, 0);
+    animation: bgShifter 15s ease-in-out alternate infinite;
+}
+
+@keyframes bgShifter {
+    0%
+    {
+        background: url(bg1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    50%
+    {
+        background: url(bg2.png);
+        background-size: cover;
+        background-position: center;
+    }
+    100%
+    {
+        background: url(bg3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+header nav
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1rem;
+    width: 100%;
+    font-family: 'DM Sans', 'sans-serif';
+}
+
+header nav .logo
+{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+
+header nav ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+}
+
+header nav ul li
+{
+    padding: 0 1rem;
+}
+
+header nav li .active_link
+{
+    font-weight: bold;
+}
+
+header nav ul li a
+{
+    text-decoration: none;
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+
+header nav li a:hover
+{
+    color: #daecff;
+}
+
+header nav .login
+{
+    text-decoration: none;
+    color: white;
+    padding: 10px 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+header nav .login:hover
+{
+    color: #00438B;
+    background-color: white;
+}
+
+header nav .bars 
+{
+    display: none;
+}
+
+header .dropdown_menu
+{
+    position: absolute;
+    right: 1rem;
+    left: 1rem;
+    top: 80px;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: 'DM Sans', 'sans-serif';
+    transition: 0.2s ease-in-out;
+    display: none;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+header .dropdown_menu li .active_link
+{
+    font-weight: bold;
+}
+
+header .dropdown_menu.open
+{
+    height: 340px;
+}
+
+header .dropdown_menu li
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+header .dropdown_menu li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+header .dropdown_menu li a:hover
+{
+    color: #daecff;
+}
+
+header .dropdown_menu li .login
+{
+    text-decoration: none;
+    color: white;
+    padding: 10px 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+header .dropdown_menu li .login:hover
+{
+    color: #0060C7;
+    background-color: white;
+}
+
+
+.drop1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    height: 80vh;
+}
+
+.drop1 .heading1
+{
+    display: block;
+    
+}
+
+.drop1 .heading1 .tag1
+{
+    font-size: 60px;
+    font-family: 'DM Sans', 'sans-serif';
+    color: white;
+
+}
+
+.drop1 .heading1 .text1
+{
+    font-size: 18px;
+    font-family: 'DM Sans', 'sans-serif';
+    color: rgb(255, 63, 63);
+    text-shadow: 0px 0px 10px red;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px 0;
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    text-decoration: line-through;
+    margin: 0;
+    animation: blipEffect 1s ease-in-out alternate infinite;
+}
+
+@keyframes blipEffect 
+{
+    0%
+    {
+        color: rgb(255, 63, 63);
+    }
+    100%{
+        color: rgba(0, 0, 0, 0);
+        text-shadow: none;
+    }
+}
+
+.drop1 .heading1 .text2
+{
+    display: none;
+}
+
+
+
+
+/*RESPONSIVENESS*/
+
+@media (max-width: 675px) {
+    header nav
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul, header nav .login 
+    {
+        display: none;
+    }
+
+    header nav .bars 
+    {
+        display: block;
+    }
+
+    header nav .bars i {
+        color: white;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
+    header .dropdown_menu
+    {
+        display: block;
+    }
+
+}
+    </style>
+
+    <script>
+        /* NAVBAR */
+        const toggleButton = document.querySelector('.bars')
+        const toggleIcon = document.querySelector('.bars i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleButton.onclick = function () 
+        {
+            dropDownMenu.classList.toggle('open')
+
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+
+        /* QuoteShift */
+        const wrongQuoteText = document.getElementById('Wquote')
+        const rightQuoteText = document.getElementById('Rquote')
+
+        wrongQuoteText.onclick = function () {
+            wrongQuoteText.replaceChildren(Rquote)
+            wrongQuoteText.style.textDecoration = "none"
+            rightQuoteText.style.display = "block"
+            rightQuoteText.style.margin = "0px"
+            rightQuoteText.style.color = "lightgreen"
+            rightQuoteText.style.textShadow = '0px 0px 10px lightgreen'
+        }
+    </script>
+</body>
+</html>
